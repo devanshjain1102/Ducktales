@@ -7,7 +7,6 @@ import Home from './components/home/Home';
 function App() {
   return (
     <div >
-    <Home /> 
 
     <Routes >
       <Route path='/Login' element={<Login />}>
@@ -15,6 +14,7 @@ function App() {
       </Route>
       <Route path='/Signup' element={<Signup />}>
       </Route>
+      <Route path = '/' element={<Home/>}/>
     </Routes>
     </div>
   );
