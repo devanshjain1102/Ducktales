@@ -1,29 +1,33 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import LogoImg from '../assets/logo.png'
+import { CiShoppingCart } from "react-icons/ci";
+
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <Nav>
-      <Logo href="/">MyLogo</Logo>
+      <img src={LogoImg} className='w-[90px] m-[-30px]' onClick={() => navigate('/')}/>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span />
         <span />
         <span />
       </Hamburger>
-      <Menu isOpen={isOpen}>
-        <MenuLink to="/">Home</MenuLink>
-        <MenuLink to="/about">About</MenuLink>
-        <MenuLink to="/services">Services</MenuLink>
-        <Dropdown>
+      <Menu >
+        {!(location.pathname.toLowerCase() === '/login' || location.pathname.toLowerCase() === '/signup') && <MenuLink to="/login">Login/Register</MenuLink>}
+        <MenuLink to='/cart'><CiShoppingCart size={30}/></MenuLink>
+        {/* <Dropdown>
           <Dropbtn>More</Dropbtn>
           <DropdownContent>
             <DropdownLink to="/portfolio">Portfolio</DropdownLink>
             <DropdownLink to="/contact">Contact</DropdownLink>
           </DropdownContent>
-        </Dropdown>
+        </Dropdown> */}
       </Menu>
     </Nav>
   );
@@ -36,7 +40,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #333;
+  background: #ea7585;
   color: #fff;
 `;
 
@@ -91,7 +95,6 @@ const MenuLink = styled(Link)`
   font-size: 1.2rem;
 
   &:hover {
-    color: #ff6347;
   }
 `;
 

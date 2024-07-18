@@ -12,12 +12,12 @@ const Login = () => {
         <h1>Login</h1>
     
         <div className="input-box">
-          <input type="text" placeholder="UserName" required />
+          <input type="text" placeholder="Email" required />
           <FaUser className="icon" />
         </div>
         
         <div className="input-box">
-          <input type="password" placeholder="password" required />
+          <input type="Password" placeholder="password" required />
           <FaLock className="icon" />
         </div>
         

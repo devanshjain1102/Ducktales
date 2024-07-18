@@ -1,11 +1,12 @@
 .wrapper{
+    margin:auto;
     width: 420px;
-    background: transparent;
+    /* background: transparent; */
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(36px);
     -webkit-backdrop-filter:blur(36px);
     box-shadow: 0 0 10px rgba(255, 255, 255, .2);
-    color: #ffffff;
+    /* color: #ffffff; */
     border-radius: 10px;
     padding: 30px 40px;
 }
@@ -27,18 +28,18 @@
     width: 100%;
     height: 100%;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgb(30 29 29 / 20%);
     outline: none;
     border-radius: 40px;
     font-size: 16px;
-    color: #fff;
+    /* color: #fff; */
     padding: 20px 45px 20px 20px;
 
 }
-
+/* 
 .input-box input::placeholder {
     color: #fff;
-}
+} */
 
 .input-box .icon {
     position: absolute;
@@ -61,7 +62,7 @@
 }
 
 .remember-forget a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
@@ -73,14 +74,14 @@
 .wrapper button {
     width: 100%;
     height: 45px;
-    background: #fff;
+    background: #ea7585;
     border: none;
     outline: none;
     border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: #fff;
     font-weight: 700;
 }
 
@@ -91,7 +92,7 @@
 }
 
 .resister-link p a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     font-weight: 600;
 }

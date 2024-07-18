@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px; /* Adjust base font size as needed */
+  line-height: 1.6; /* Adjust line height for readability */
+  color: #333; /* Adjust text color as needed */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold weight for headings */
+  margin-bottom: 1rem; /* Adjust spacing as needed */
+  color: #222; /* Adjust heading color as needed */
+}
+
+
+a {
+  color: #1a73e8; /* Adjust link color as needed */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
