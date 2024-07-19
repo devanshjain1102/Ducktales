@@ -6,7 +6,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './components/home/Home';
 import CategoryPage from './components/Category/CategoryPage';
 import Navigation from './components/commons/Navigation';
-import Cart from './components/commons/cart/Cart';
+import Cart from './components/cart/Cart';
+import ItemPage from './components/Item/ItemPage';
 function App() {
   return (
     <div >
@@ -19,6 +20,7 @@ function App() {
       </Route>
       <Route path="/category" element={<CategoryPage />} />
       <Route path='/cart' element={<Cart/>} />
+      <Route path='/item' element={<ItemPage/>} />
     </Routes>
     </div>
   );

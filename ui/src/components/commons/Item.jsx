@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const Item = ({ image, title, price }) => {
-    return (
+const Item = ({ image, title, price, onClick }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)} onClick={onClick}>
         <ItemCard>
             <ItemImage src={image} alt={title} />
-            <ItemInfo>
-                <ItemTitle>{title}</ItemTitle>
-                <ItemPrice>${price}</ItemPrice>
-                <ItemButton>Add to Cart</ItemButton>
-            </ItemInfo>
+              <ItemInfo>
+                  <ItemTitle>{title}</ItemTitle>
+                  <ItemPrice>₹{price}</ItemPrice>
+                  {isHovered && <ItemButton>Add to Cart</ItemButton>}
+              </ItemInfo>
+            
         </ItemCard>
+        </div>
     );
 };
 

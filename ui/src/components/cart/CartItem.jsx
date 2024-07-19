@@ -11,6 +11,7 @@ const CartItem = ({ item, onAdd, onRemove }) => {
           <p className="text-gray-600">₹{item.price}</p>
         </div>
       </div>
+      <div className='flex items-center gap-[30px]'>
       <div className='flex flex-col items-center '>
         <div className="flex justify-between items-center border-[2px] border-[#ec9ba6] rounded-md w-[80px]">
             {item.isRemoveAvailable && <button onClick={() => onRemove(item.id)} className="pl-[4px] pr-[4px] font-bold text-black hover:text-red-700">-</button>}
@@ -19,6 +20,8 @@ const CartItem = ({ item, onAdd, onRemove }) => {
             <button onClick={() => onAdd(item.id)} className=" font-bold pl-[4px] pr-[4px] text-black hover:text-black hover:bg-[#ec9ba6]">+</button>
         </div>
         <p>₹{item.totalPrice}</p>
+      </div>
+      <buttton onClick={()=>onRemove(item.id)} className="pl-[4px] pr-[4px] font-bold text-black text-[25px] hover:text-[#ec9ba6] hover:cursor-pointer">x</buttton>
       </div>
     </div>
   );

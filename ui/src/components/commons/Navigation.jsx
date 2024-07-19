@@ -12,7 +12,7 @@ const Navigation = () => {
 
   return (
     <Nav>
-      <img src={LogoImg} className='w-[90px] m-[-30px]' onClick={() => navigate('/')}/>
+      <img src={LogoImg} className='w-[90px] m-[-30px] hover:cursor-pointer' onClick={() => navigate('/')}/>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span />
         <span />

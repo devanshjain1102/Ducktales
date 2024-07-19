@@ -35,20 +35,22 @@ const Cart = () =>{
             setCartItems(prevItems => {
                 const itemIndex = prevItems.findIndex(item => item.id === id);
                 const updatedItems = [...prevItems];
-                if(updatedItems[itemIndex].quantity - 1 === 0){
-                    return updatedItems;
-                }
                 updatedItems[itemIndex] = {
                   ...updatedItems[itemIndex],
                   quantity: updatedItems[itemIndex].quantity - 1,
                   totalPrice: updatedItems[itemIndex].price *  (updatedItems[itemIndex].quantity - 1)
                 };
+
                 if(updatedItems[itemIndex].quantity === 1) {
                     updatedItems[itemIndex] = {
                         ...updatedItems[itemIndex],
                         isRemoveAvailable: false
                     }
-                } else updatedItems[itemIndex] = {
+                }
+                else if(updatedItems[itemIndex].quantity === 0){
+                  updatedItems.splice(itemIndex, 1);
+                }
+                 else updatedItems[itemIndex] = {
                     ...updatedItems[itemIndex],
                     isRemoveAvailable: true
                 }
